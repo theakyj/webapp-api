@@ -11,7 +11,7 @@ const app = express()
 
 // cors
 app.use(cors({
-  origin: 'https://chipper-snickerdoodle-801550.netlify.app',
+  origin: 'https://webapp-api-production-6785.up.railway.app/',
   credentials: true
 }))
 
