@@ -11,7 +11,7 @@ const app = express()
 
 // cors
 app.use(cors({
-  origin: 'https://webapp-api-production-6785.up.railway.app/',
+  origin: 'https://main--bucolic-lily-0155a3.netlify.app',
   credentials: true
 }))
 
