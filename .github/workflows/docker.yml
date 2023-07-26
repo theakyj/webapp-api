@@ -12,7 +12,7 @@ jobs:
                   node-version: 18
             - run: npm install
             - run: npm run test
-            - run: npm run build
+            - run: node server.js
             - uses: mr-smithers-excellent/docker-build-push@v6
               with:
                   image: theakyj/workoutbud
