@@ -11,7 +11,7 @@ const app = express()
 
 // cors
 app.use(cors({
-  origin: 'https://chipper-snickerdoodle-801550.netlify.app',
+  origin: 'https://bucolic-lily-0155a3.netlify.app',
   credentials: true
 }))
 
