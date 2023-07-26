@@ -11,7 +11,7 @@ const app = express()
 
 // cors
 app.use(cors({
-  origin: 'https://main--bucolic-lily-0155a3.netlify.app',
+  origin: 'https://chipper-snickerdoodle-801550.netlify.app',
   credentials: true
 }))
 
@@ -27,11 +27,14 @@ app.use((req, res, next) => {
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
-// connect to db
+// Export app for testing purposes
+module.exports = app
+
+// connect to db and start the server
 mongoose.connect(process.env.MONGO_URI)
   .then(() => {
     // listen for requests
-    app.listen(process.env.PORT, () => {
+    const server = app.listen(process.env.PORT, () => {
       console.log('connected to db & listening on port', process.env.PORT)
     })
   })
